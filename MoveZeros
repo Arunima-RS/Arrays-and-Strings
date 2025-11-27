@@ -1,0 +1,40 @@
+public class MoveZeros {
+
+	public static void main(String[] args) {
+		
+		int[] nums= {1,2,0,0,0,7};
+		
+		moveZeros(nums,nums.length);
+		
+		
+		for(int n: nums) {
+			
+			System.out.print(n+" ");
+		}
+
+	}
+
+	private static void moveZeros(int[] nums, int l) {
+		
+		int i=0;
+		
+		for(int n: nums) {
+			
+			if(n!=0) {
+				
+				nums[i]=n;
+				i++;
+			}
+		}
+		
+		while(i<l) {
+			
+			nums[i]=0;
+			
+			i++;
+			
+		}
+		
+	}
+
+}
